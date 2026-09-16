@@ -10,9 +10,9 @@ sentences = [
 ]
 model = Word2Vec(sentences,vector_size=50, window=2, min_count=1,workers=4)
 print("original text", sentences)
-print("word embedding cat", model.wv['cat'])
+print("\nword embedding cat", model.wv['cat'])
 
-print("word similar to cat", model.wv.most_similar('cat',topn=3)) 
+print("\nword similar to cat", model.wv.most_similar('cat',topn=3)) 
 
 
 
