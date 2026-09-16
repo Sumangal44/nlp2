@@ -8,7 +8,7 @@ sentences = [
     ["The", 'fish', 'is', 'swimming', 'in', 'the', 'water'],
     ["The", 'child', 'is', 'playing', 'in', 'the', 'park']
 ]
-model = Word2Vec(sentences,vector_size=50, window=2, min_count=1,workers=2)
+model = Word2Vec(sentences,vector_size=50, window=2, min_count=1,workers=4)
 print("original text", sentences)
 print("word embedding cat", model.wv['cat'])
 
