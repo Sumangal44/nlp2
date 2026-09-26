@@ -2,18 +2,14 @@
 from gensim.models import Word2Vec
 
 sentences = [
-    ["The", 'cat', 'is', 'sitting', 'on', 'the', 'mat'],
-    ["The", 'dog', 'is', 'playing', 'with', 'the', 'ball'],
-    ["The", 'bird', 'is', 'flying', 'in', 'the', 'sky'],
-    ["The", 'fish', 'is', 'swimming', 'in', 'the', 'water'],
-    ["The", 'child', 'is', 'playing', 'in', 'the', 'park']
+    ["The", "cat", "is", "sitting", "on", "the", "mat"],
+    ["The", "dog", "is", "playing", "with", "the", "ball"],
+    ["The", "bird", "is", "flying", "in", "the", "sky"],
+    ["The", "fish", "is", "swimming", "in", "the", "water"],
+    ["The", "child", "is", "playing", "in", "the", "park"],
 ]
-model = Word2Vec(sentences,vector_size=50, window=2, min_count=1,workers=4)
+model = Word2Vec(sentences, vector_size=50, window=2, min_count=1, workers=4)
 print("original text\n", sentences)
-print("\nword embedding cat\n", model.wv['cat'])
+print("\nword embedding cat\n", model.wv["cat"])
 
-print("\nword similar to cat\n", model.wv.most_similar('cat',topn=3)) 
-
-
-
-
+print("\nword similar to cat\n", model.wv.most_similar("cat", topn=3))
